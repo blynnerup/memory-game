@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ObjectClicker : MonoBehaviour
 {
+    int firstClickedNumber;
+    string[] gamePieces;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,11 +15,15 @@ public class ObjectClicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Left mouse being clicked
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
-            Debug.Log(rayHit.transform.name);
-
+            RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+            if (hit.collider != null)
+            {
+                Debug.Log(hit.collider.gameObject.name);
+            }
+            
         }
     }
 }
