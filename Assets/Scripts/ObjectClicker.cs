@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ObjectClicker : MonoBehaviour
 {
-    int firstClickedNumber;
+    int? firstClickedNumber;
+    GamePieceLogic firstGameObject;
     string[] gamePieces;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,28 @@ public class ObjectClicker : MonoBehaviour
             if (hit.collider != null)
             {
                 Debug.Log(hit.collider.gameObject.name);
+                var piece = hit.collider.GetComponent("GamePieceLogic") as GamePieceLogic;
+                if (firstClickedNumber == null)
+                {
+                    firstClickedNumber = piece.imageNumber;
+                    firstGameObject = piece;
+                } 
+                else
+                {
+                    if (firstClickedNumber == piece.imageNumber)
+                    {
+                        Debug.Log("Match");
+                        piece.FoundMatch();
+                        firstGameObject.FoundMatch();
+                    }
+                    else
+                    {
+                        Debug.Log("No Match");
+                    }
+
+                    firstClickedNumber = null;
+                    firstGameObject = null;
+                }
             }
             
         }

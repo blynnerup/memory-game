@@ -18,4 +18,9 @@ public class GamePieceLogic : MonoBehaviour
     {
         
     }
+
+    public void FoundMatch()
+    {
+        Destroy(gameObject);
+    }
 }
