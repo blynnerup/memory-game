@@ -6,9 +6,7 @@ public class ObjectClicker : MonoBehaviour
 {
     int? firstClickedNumber;
     GamePieceLogic firstGameObject;
-    string[] gamePieces;
     public Sprite flask;
-    float waitTimer = 100;
     // Start is called before the first frame update
     void Start()
     {
