@@ -7,10 +7,11 @@ public class ObjectClicker : MonoBehaviour
     int? firstClickedNumber;
     GamePieceLogic firstGameObject;
     string[] gamePieces;
+    public Sprite flask;
+    float waitTimer = 100;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -22,31 +23,51 @@ public class ObjectClicker : MonoBehaviour
             RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
             if (hit.collider != null)
             {
-                Debug.Log(hit.collider.gameObject.name);
                 var piece = hit.collider.GetComponent("GamePieceLogic") as GamePieceLogic;
                 if (firstClickedNumber == null)
                 {
                     firstClickedNumber = piece.imageNumber;
                     firstGameObject = piece;
+                    piece.ShowSprite();
                 } 
                 else
                 {
                     if (firstClickedNumber == piece.imageNumber)
                     {
                         Debug.Log("Match");
-                        piece.FoundMatch();
-                        firstGameObject.FoundMatch();
+                        StartCoroutine(MatchWaiter(piece));
                     }
                     else
                     {
-                        Debug.Log("No Match");
+                        Debug.Log("No match");
+                        StartCoroutine(Waiter(piece));
                     }
-
-                    firstClickedNumber = null;
-                    firstGameObject = null;
                 }
             }
             
         }
+    }
+    
+    private IEnumerator Waiter(GamePieceLogic piece)
+    {
+        piece.ShowSprite();
+        yield return new WaitForSeconds(2);
+        piece.ShowSprite();
+        firstGameObject.ShowSprite();
+
+        firstClickedNumber = null;
+        firstGameObject = null;
+    }
+
+    private IEnumerator MatchWaiter(GamePieceLogic piece)
+    {
+        piece.ShowSprite();
+        yield return new WaitForSeconds(2);
+
+        piece.FoundMatch();
+        firstGameObject.FoundMatch();
+
+        firstClickedNumber = null;
+        firstGameObject = null;
     }
 }

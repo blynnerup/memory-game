@@ -156,6 +156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageNumber: 1
   removed: 0
+  flipped: 0
+  backart: {fileID: 21300000, guid: a1af5c2267fffc4469ddd5a52ee2c43f, type: 3}
+  image: {fileID: 3662909557045353148, guid: 89c9608b24ab0544b9cbc27094aa1234, type: 3}
 --- !u!61 &500224261
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -276,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a300d5da46d0b45ae0b2a76cae5405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flask: {fileID: -6045050281881364382, guid: 89c9608b24ab0544b9cbc27094aa1234, type: 3}
 --- !u!4 &844270656
 Transform:
   m_ObjectHideFlags: 0
@@ -323,6 +327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageNumber: 1
   removed: 0
+  flipped: 0
+  backart: {fileID: 21300000, guid: a1af5c2267fffc4469ddd5a52ee2c43f, type: 3}
+  image: {fileID: 3662909557045353148, guid: 89c9608b24ab0544b9cbc27094aa1234, type: 3}
 --- !u!61 &939418898
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -538,6 +545,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageNumber: 0
   removed: 0
+  flipped: 0
+  backart: {fileID: 21300000, guid: a1af5c2267fffc4469ddd5a52ee2c43f, type: 3}
+  image: {fileID: -6045050281881364382, guid: 89c9608b24ab0544b9cbc27094aa1234, type: 3}
 --- !u!1 &1666455037
 GameObject:
   m_ObjectHideFlags: 0
