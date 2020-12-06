@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GamePiecesGenerator : MonoBehaviour
 {
-    GameObject gamePiece;
+    public GameObject gamePiece;
 
     private List<GameObject> gamePieces = new List<GameObject>();
     public Transform generatorPoint;
