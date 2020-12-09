@@ -43,4 +43,9 @@ public class GamePieceLogic : MonoBehaviour
             return;
         }
     }
+
+    public void SetImage(Sprite sprite)
+    {
+        image = sprite;
+    }
 }
