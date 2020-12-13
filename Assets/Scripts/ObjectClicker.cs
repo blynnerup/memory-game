@@ -33,7 +33,10 @@ public class ObjectClicker : MonoBehaviour
                     if (firstClickedNumber == piece.imageNumber)
                     {
                         Debug.Log("Match");
-                        UIController.instance.Player1Matched(); 
+                        if (MemoryGameManager.instance.Player1Turn)
+                            UIController.instance.Player1Matched();
+                        else
+                            UIController.instance.Player2Matched();
                         StartCoroutine(MatchWaiter(piece));
                     }
                     else
@@ -41,6 +44,12 @@ public class ObjectClicker : MonoBehaviour
                         Debug.Log("No match");
                         StartCoroutine(Waiter(piece));
                     }
+
+                    MemoryGameManager.instance.Player1Turn = !MemoryGameManager.instance.Player1Turn;
+                    if (MemoryGameManager.instance.Player1Turn)
+                        Debug.Log("Player1 Turn");
+                    if (!MemoryGameManager.instance.Player1Turn)
+                        Debug.Log("Player2 Turn");
                 }
             }
             

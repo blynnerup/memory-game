@@ -9,6 +9,9 @@ public class UIController : MonoBehaviour
     public Text player1Score;
     public Text player2Score;
 
+    private int p1score = 0;
+    private int p2score = 0;
+
     public void Awake()
     {
         instance = this;
@@ -17,8 +20,8 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player1Score.text = "0";
-        player2Score.text = "0";
+        player1Score.text = "Player 1: 0";
+        player2Score.text = "Player 2: 0";
     }
 
     // Update is called once per frame
@@ -29,15 +32,13 @@ public class UIController : MonoBehaviour
 
     public void Player1Matched()
     {
-        var player1CurrentScore = int.Parse(player1Score.text);
-        player1CurrentScore++;
-        player1Score.text = player1CurrentScore.ToString();
+        p1score++;
+        player1Score.text = "Player 1: " + p1score.ToString();
     }
 
     public void Player2Matched()
     {
-        var player2CurrentScore = int.Parse(player2Score.text);
-        player2CurrentScore++;
-        player1Score.text = player2CurrentScore.ToString();
+        p2score++;
+        player2Score.text = "Player 2: " + p2score.ToString();
     }
 }
