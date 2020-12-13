@@ -33,6 +33,7 @@ public class ObjectClicker : MonoBehaviour
                     if (firstClickedNumber == piece.imageNumber)
                     {
                         Debug.Log("Match");
+                        UIController.instance.Player1Matched();
                         StartCoroutine(MatchWaiter(piece));
                     }
                     else
