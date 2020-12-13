@@ -43,13 +43,14 @@ public class ObjectClicker : MonoBehaviour
                     {
                         Debug.Log("No match");
                         StartCoroutine(Waiter(piece));
+                        MemoryGameManager.instance.ShiftTurn();
                     }
 
-                    MemoryGameManager.instance.Player1Turn = !MemoryGameManager.instance.Player1Turn;
-                    if (MemoryGameManager.instance.Player1Turn)
-                        Debug.Log("Player1 Turn");
-                    if (!MemoryGameManager.instance.Player1Turn)
-                        Debug.Log("Player2 Turn");
+                    //MemoryGameManager.instance.Player1Turn = !MemoryGameManager.instance.Player1Turn;
+                    //if (MemoryGameManager.instance.Player1Turn)
+                    //    Debug.Log("Player1 Turn");
+                    //if (!MemoryGameManager.instance.Player1Turn)
+                    //    Debug.Log("Player2 Turn");
                 }
             }
             
@@ -60,9 +61,9 @@ public class ObjectClicker : MonoBehaviour
     {
         piece.ShowSprite();
         yield return new WaitForSeconds(2);
+
         piece.ShowSprite();
         firstGameObject.ShowSprite();
-
         firstClickedNumber = null;
         firstGameObject = null;
     }

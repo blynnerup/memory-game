@@ -15,11 +15,18 @@ public class MemoryGameManager : MonoBehaviour
     void Start()
     {
         Player1Turn = true;
+        UIController.instance.SetPlayerTurn(Player1Turn);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ShiftTurn()
+    {
+        Player1Turn = !Player1Turn;
+        UIController.instance.SetPlayerTurn(Player1Turn);
     }
 }

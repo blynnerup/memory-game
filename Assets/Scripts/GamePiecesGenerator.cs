@@ -56,6 +56,7 @@ public class GamePiecesGenerator : MonoBehaviour
                     newPiece.GetComponent<GamePieceLogic>().SetImage(pickedSprite);
                     newPiece.GetComponent<GamePieceLogic>().imageNumber = usedImages.Keys.ToList().IndexOf(pickedSprite);
                     generatorPoint.transform.position += new Vector3(xOffset, 0, 0);
+                    gamePieces.Add(newPiece);
                 }
             }
             if ((i + 1) % 5 == 0)
@@ -63,7 +64,6 @@ public class GamePiecesGenerator : MonoBehaviour
                 generatorPoint.transform.position = new Vector3(-7.5f, yOffset, 0);
             }
         }
-
     }
 
     private Sprite GetSprite()

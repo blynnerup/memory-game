@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour
     public static UIController instance;
     public Text player1Score;
     public Text player2Score;
+    public Text playerTurn;
 
     private int p1score = 0;
     private int p2score = 0;
@@ -40,5 +41,13 @@ public class UIController : MonoBehaviour
     {
         p2score++;
         player2Score.text = "Player 2: " + p2score.ToString();
+    }
+
+    public void SetPlayerTurn(bool player1turn)
+    {
+        if (player1turn)
+            playerTurn.text = "Player 1 turn.";
+        else
+            playerTurn.text = "Player 2 turn."; 
     }
 }
