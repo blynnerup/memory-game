@@ -192,6 +192,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -201,8 +202,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -1444,6 +1445,63 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Potions_2x_37: 6843652953874544923
+      Potions_2x_31: -3375946078878819109
+      Potions_2x_49: 9076969947493922282
+      Potions_2x_33: -4926295881057554472
+      Potions_2x_34: -7251116847256557430
+      Potions_2x_25: -4463683701869244851
+      Potions_2x_51: 7183656997674665146
+      Potions_2x_43: -6731727296798078651
+      Potions_2x_16: 157495458145819803
+      Potions_2x_2: -6241654170123160507
+      Potions_2x_9: 7880821534954836546
+      Potions_2x_36: -3297014873559012698
+      Potions_2x_40: 2175990420742385096
+      Potions_2x_17: -3165950169403638357
+      Potions_2x_19: 8127956118821865739
+      Potions_2x_48: -7048728326066803401
+      Potions_2x_23: 6342918019564915586
+      Potions_2x_30: -4440336375303596793
+      Potions_2x_50: 3420818218143908574
+      Potions_2x_11: -4469657100445975905
+      Potions_2x_1: 3662909557045353148
+      Potions_2x_39: 6292519436425089725
+      Potions_2x_54: 1638212856851687533
+      Potions_2x_46: 7460605310826294273
+      Potions_2x_55: 8124385177071900561
+      Potions_2x_13: 7863267589149219037
+      Potions_2x_22: 8587987796965221754
+      Potions_2x_12: -3035944234369396969
+      Potions_2x_20: -965614886197633745
+      Potions_2x_14: -3150288815929111130
+      Potions_2x_3: -3205634642969854913
+      Potions_2x_26: 1742605375204782788
+      Potions_2x_32: 6256736938057419531
+      Potions_2x_38: -5241282930737806201
+      Potions_2x_29: -3048251592847805196
+      Potions_2x_10: 8782345117813785437
+      Potions_2x_15: -4930437903523172406
+      Potions_2x_7: 3562247267527822548
+      Potions_2x_5: 2379689363918877898
+      Potions_2x_8: -2140985019206107216
+      Potions_2x_21: 4362418149442530415
+      Potions_2x_45: -4630754768795814024
+      Potions_2x_24: 262266436775967487
+      Potions_2x_44: 3463642038080898207
+      Potions_2x_0: -6045050281881364382
+      Potions_2x_35: -3688844544913220692
+      Potions_2x_18: -1326277998771486187
+      Potions_2x_28: -7053877799577803786
+      Potions_2x_6: -3242904605456936822
+      Potions_2x_47: 2433469515910628172
+      Potions_2x_53: -8747250176820946273
+      Potions_2x_41: 4431302882942667360
+      Potions_2x_52: -3705360571234481363
+      Potions_2x_4: -8896429500898549531
+      Potions_2x_42: 2435142956849970828
+      Potions_2x_27: -5948142349969445993
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
